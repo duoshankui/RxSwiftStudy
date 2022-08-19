@@ -11,4 +11,12 @@ class Observable<T>: ObservableType {
     init() {
         
     }
+    
+    func subscribe<Observer: ObserverType>(_ observer: Observer) -> Disposable where Observer.Element == T {
+        rxAbstractMethod()
+    }
+    
+    func asObservable() -> Observable<T> {
+        return self
+    }
 }

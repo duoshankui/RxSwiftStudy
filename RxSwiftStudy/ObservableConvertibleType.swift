@@ -9,4 +9,6 @@ import Foundation
 
 protocol ObservableConvertibleType {
     associatedtype T
+    
+    func asObservable() -> Observable<T>
 }

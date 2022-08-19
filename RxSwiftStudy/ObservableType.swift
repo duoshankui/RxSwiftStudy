@@ -9,38 +9,19 @@ import Foundation
 
 protocol ObservableType: ObservableConvertibleType {
     
-    
-    
+    func subscribe<Observer: ObserverType>(_ observer: Observer) -> Disposable where Observer.Element == T
+}
+
+extension ObservableType {
+    func asObservable() -> Observable<T> {
+        Observable.create { o in self.subscribe(o)  }
+    }
 }
 
 extension ObservableType {
     static func create(_ subscribe: @escaping (AnyObserver<T>) -> Disposable) -> Observable<T> {
         return AnonymousObservable(subscribe)
     }
-}
-
-
-extension ObservableType {
-    func subscribe<Object: AnyObject>(
-        with object: Object,
-        onNext: ((Object, T) -> Void)? = nil, 
-        onError: ((Object, Swift.Error) -> Void)? = nil,
-        onCompleted: ((Object) -> Void)? = nil,
-        onDisposed: ((Object) -> Void)? = nil
-    ) -> Disposable {
-        return Disposables.create()
-    }
-    
-    
-    func subscribe(
-        onNext: ((T) -> Void)? = nil, 
-        onError: ((Swift.Error) -> Void)? = nil,
-        onCompleted: (() -> Void)? = nil,
-        onDisposed: (() -> Void)? = nil
-    ) -> Disposable {
-        return Disposables.create()
-    }
-    
 }
 
 

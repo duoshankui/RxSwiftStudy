@@ -9,6 +9,6 @@ import Foundation
 
 struct AnyObserver<Element>: ObserverType {
     func on(_ event: Event<Element>) {
-        
+        print(event)
     }
 }

@@ -9,6 +9,8 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    let disposeBag = DisposeBag()
+
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -20,7 +22,6 @@ class ViewController: UIViewController {
 
 extension ViewController {
     func testMethod() {
-        let disposeBag = DisposeBag()
         
         let numbers: Observable<Int> = Observable.create { observer in
             observer.onNext(1)

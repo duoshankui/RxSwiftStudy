@@ -25,6 +25,15 @@
 		28FD355C28AE13DA001B6AB6 /* ObserverType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28FD355028AE13DA001B6AB6 /* ObserverType.swift */; };
 		28FD355D28AE13DA001B6AB6 /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28FD355128AE13DA001B6AB6 /* Observable.swift */; };
 		28FD355E28AE13DA001B6AB6 /* DisposeBag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28FD355228AE13DA001B6AB6 /* DisposeBag.swift */; };
+		28FD356328AE498F001B6AB6 /* AnonymousObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28FD356228AE498F001B6AB6 /* AnonymousObserver.swift */; };
+		28FD356528AE49BA001B6AB6 /* ObserverBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28FD356428AE49BA001B6AB6 /* ObserverBase.swift */; };
+		28FD356728AE4B2A001B6AB6 /* Cancelable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28FD356628AE4B2A001B6AB6 /* Cancelable.swift */; };
+		28FD356928AE4BC8001B6AB6 /* BinaryDisposable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28FD356828AE4BC8001B6AB6 /* BinaryDisposable.swift */; };
+		28FD356C28AF37D6001B6AB6 /* AnonymousDisposable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28FD356B28AF37D6001B6AB6 /* AnonymousDisposable.swift */; };
+		28FD356E28AF3E78001B6AB6 /* Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28FD356D28AF3E78001B6AB6 /* Rx.swift */; };
+		28FD357028AF3EDF001B6AB6 /* ObservableType+Extenstions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28FD356F28AF3EDF001B6AB6 /* ObservableType+Extenstions.swift */; };
+		28FD357228AF7C9D001B6AB6 /* ImmediateSchedulerType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28FD357128AF7C9D001B6AB6 /* ImmediateSchedulerType.swift */; };
+		28FD357428AF7D6E001B6AB6 /* CurrentThreadScheduler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28FD357328AF7D6E001B6AB6 /* CurrentThreadScheduler.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +57,15 @@
 		28FD355028AE13DA001B6AB6 /* ObserverType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ObserverType.swift; sourceTree = "<group>"; };
 		28FD355128AE13DA001B6AB6 /* Observable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Observable.swift; sourceTree = "<group>"; };
 		28FD355228AE13DA001B6AB6 /* DisposeBag.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DisposeBag.swift; sourceTree = "<group>"; };
+		28FD356228AE498F001B6AB6 /* AnonymousObserver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnonymousObserver.swift; sourceTree = "<group>"; };
+		28FD356428AE49BA001B6AB6 /* ObserverBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObserverBase.swift; sourceTree = "<group>"; };
+		28FD356628AE4B2A001B6AB6 /* Cancelable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cancelable.swift; sourceTree = "<group>"; };
+		28FD356828AE4BC8001B6AB6 /* BinaryDisposable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BinaryDisposable.swift; sourceTree = "<group>"; };
+		28FD356B28AF37D6001B6AB6 /* AnonymousDisposable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnonymousDisposable.swift; sourceTree = "<group>"; };
+		28FD356D28AF3E78001B6AB6 /* Rx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rx.swift; sourceTree = "<group>"; };
+		28FD356F28AF3EDF001B6AB6 /* ObservableType+Extenstions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ObservableType+Extenstions.swift"; sourceTree = "<group>"; };
+		28FD357128AF7C9D001B6AB6 /* ImmediateSchedulerType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImmediateSchedulerType.swift; sourceTree = "<group>"; };
+		28FD357328AF7D6E001B6AB6 /* CurrentThreadScheduler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentThreadScheduler.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,8 +115,17 @@
 				28FD355128AE13DA001B6AB6 /* Observable.swift */,
 				28FD354B28AE13DA001B6AB6 /* ObservableConvertibleType.swift */,
 				28FD354D28AE13DA001B6AB6 /* ObservableType.swift */,
+				28FD356F28AF3EDF001B6AB6 /* ObservableType+Extenstions.swift */,
 				28FD355028AE13DA001B6AB6 /* ObserverType.swift */,
 				28FD354828AE13DA001B6AB6 /* Producer.swift */,
+				28FD356228AE498F001B6AB6 /* AnonymousObserver.swift */,
+				28FD356B28AF37D6001B6AB6 /* AnonymousDisposable.swift */,
+				28FD356428AE49BA001B6AB6 /* ObserverBase.swift */,
+				28FD356628AE4B2A001B6AB6 /* Cancelable.swift */,
+				28FD356828AE4BC8001B6AB6 /* BinaryDisposable.swift */,
+				28FD356D28AF3E78001B6AB6 /* Rx.swift */,
+				28FD357128AF7C9D001B6AB6 /* ImmediateSchedulerType.swift */,
+				28FD357328AF7D6E001B6AB6 /* CurrentThreadScheduler.swift */,
 			);
 			path = RxSwiftStudy;
 			sourceTree = "<group>";
@@ -175,16 +202,25 @@
 			buildActionMask = 2147483647;
 			files = (
 				28FD355C28AE13DA001B6AB6 /* ObserverType.swift in Sources */,
+				28FD357428AF7D6E001B6AB6 /* CurrentThreadScheduler.swift in Sources */,
 				28FD353828AE13B8001B6AB6 /* ViewController.swift in Sources */,
+				28FD356E28AF3E78001B6AB6 /* Rx.swift in Sources */,
 				28FD355528AE13DA001B6AB6 /* Disposables.swift in Sources */,
+				28FD356328AE498F001B6AB6 /* AnonymousObserver.swift in Sources */,
 				28FD353428AE13B8001B6AB6 /* AppDelegate.swift in Sources */,
+				28FD357028AF3EDF001B6AB6 /* ObservableType+Extenstions.swift in Sources */,
 				28FD355428AE13DA001B6AB6 /* Producer.swift in Sources */,
 				28FD355928AE13DA001B6AB6 /* ObservableType.swift in Sources */,
+				28FD356728AE4B2A001B6AB6 /* Cancelable.swift in Sources */,
+				28FD356528AE49BA001B6AB6 /* ObserverBase.swift in Sources */,
 				28FD355828AE13DA001B6AB6 /* Lock.swift in Sources */,
 				28FD355328AE13DA001B6AB6 /* DisposeBase.swift in Sources */,
 				28FD355E28AE13DA001B6AB6 /* DisposeBag.swift in Sources */,
+				28FD356928AE4BC8001B6AB6 /* BinaryDisposable.swift in Sources */,
 				28FD355628AE13DA001B6AB6 /* Event.swift in Sources */,
+				28FD357228AF7C9D001B6AB6 /* ImmediateSchedulerType.swift in Sources */,
 				28FD355B28AE13DA001B6AB6 /* AnyObserver.swift in Sources */,
+				28FD356C28AF37D6001B6AB6 /* AnonymousDisposable.swift in Sources */,
 				28FD355D28AE13DA001B6AB6 /* Observable.swift in Sources */,
 				28FD355A28AE13DA001B6AB6 /* Disposable.swift in Sources */,
 				28FD355728AE13DA001B6AB6 /* ObservableConvertibleType.swift in Sources */,

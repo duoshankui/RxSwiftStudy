@@ -11,4 +11,14 @@ class Producer<T>: Observable<T> {
     override init() {
         super.init()
     }
+    
+    override func subscribe<Observer: ObserverType>(_ observer: Observer) -> Disposable where Observer.Element == T {
+        if !CurrentThreadScheduler.isScheduleRequired {
+            
+        } else {
+            return CurrentThreadScheduler.instance.schedule(()) { _ in
+                
+            }
+        }
+    }
 }
