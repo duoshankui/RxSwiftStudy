@@ -7,8 +7,17 @@
 
 import Foundation
 
-class CurrentThreadScheduler: ImmediateSchedulerType {
+private class CurrentThreadSchedulerQueueKey: NSCopying {
+    func copy(with zone: NSZone? = nil) -> Any {
+        return self
+    }
     
+    static let instance = CurrentThreadSchedulerQueueKey()
+}
+
+
+class CurrentThreadScheduler: ImmediateSchedulerType {
+    typealias ScheduleQueue = RxMutableBox<Queue<ScheduledItemType>>
     
     static let instance = CurrentThreadScheduler()
     
@@ -38,6 +47,15 @@ class CurrentThreadScheduler: ImmediateSchedulerType {
         }
     }
     
+    static var queue: ScheduleQueue? {
+        get {
+            Thread.getThreadLocalStorageValueForKey(CurrentThreadSchedulerQueueKey.instance)
+        }
+        set {
+            Thread.setThreadLocalStorageValue(newValue, forKey: CurrentThreadSchedulerQueueKey.instance)
+        }
+    }
+    
     
     func schedule<StateType>(_ state: StateType, action: @escaping (StateType) -> Disposable) -> Disposable {
         if CurrentThreadScheduler.isScheduleRequired {
@@ -47,9 +65,38 @@ class CurrentThreadScheduler: ImmediateSchedulerType {
             
             defer {
                 CurrentThreadScheduler.isScheduleRequired = true
+                CurrentThreadScheduler.queue = nil
             }
+            
+            guard let queue = CurrentThreadScheduler.queue else {
+                return disposable
+            }
+            
+            while let latest = queue.value.dequeue() {
+                if latest.isDisposed {
+                    continue
+                }
+                latest.invoke()
+            }
+            
             
             return disposable
         }
+        
+        let existingQueue = CurrentThreadScheduler.queue
+        let queue: RxMutableBox<Queue<ScheduledItemType>>
+        
+        if let existingQueue = existingQueue  {
+            queue = existingQueue
+        } else {
+            queue = RxMutableBox(Queue<ScheduledItemType>(capacity: 1))
+            CurrentThreadScheduler.queue = queue
+        }
+        
+        let scheduleItem = ScheduledItem(action: action, state: state)
+        queue.value.enqueue(scheduleItem)
+        
+        return scheduleItem
+        
     }
 }
