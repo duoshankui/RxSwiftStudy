@@ -15,4 +15,8 @@ final class AnonymousObserver<T>: ObserverBase<T> {
     init(_ eventHandler: @escaping EventHandler) {
         self.eventHandler = eventHandler
     }
+    
+    override func onCore(_ event: Event<T>) {
+        self.eventHandler(event)
+    }
 }

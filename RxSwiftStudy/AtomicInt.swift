@@ -14,6 +14,7 @@ final class AtomicInt: NSLock {
     }
 }
 
+@discardableResult
 func fetchOr(_ this: AtomicInt, _ make: Int32) -> Int32 {
     this.lock()
     let oldValue = this.value

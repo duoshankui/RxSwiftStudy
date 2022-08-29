@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2811648A28B8D93A0000F453 /* AtomicInt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2811648928B8D93A0000F453 /* AtomicInt.swift */; };
+		2811648C28BC64E40000F453 /* Sink.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2811648B28BC64E40000F453 /* Sink.swift */; };
 		281FE85128B869EF00110749 /* RxMutableBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 281FE85028B869EF00110749 /* RxMutableBox.swift */; };
 		281FE85328B86A4E00110749 /* Queue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 281FE85228B86A4E00110749 /* Queue.swift */; };
 		281FE85528B86C0C00110749 /* Platform.Darwin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 281FE85428B86C0C00110749 /* Platform.Darwin.swift */; };
@@ -45,6 +46,7 @@
 
 /* Begin PBXFileReference section */
 		2811648928B8D93A0000F453 /* AtomicInt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AtomicInt.swift; sourceTree = "<group>"; };
+		2811648B28BC64E40000F453 /* Sink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sink.swift; sourceTree = "<group>"; };
 		281FE85028B869EF00110749 /* RxMutableBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxMutableBox.swift; sourceTree = "<group>"; };
 		281FE85228B86A4E00110749 /* Queue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Queue.swift; sourceTree = "<group>"; };
 		281FE85428B86C0C00110749 /* Platform.Darwin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Platform.Darwin.swift; sourceTree = "<group>"; };
@@ -147,6 +149,7 @@
 				281FE85828B86F0400110749 /* InvocableType.swift */,
 				281FE85A28B89BCB00110749 /* ScheduledItem.swift */,
 				2811648928B8D93A0000F453 /* AtomicInt.swift */,
+				2811648B28BC64E40000F453 /* Sink.swift */,
 			);
 			path = RxSwiftStudy;
 			sourceTree = "<group>";
@@ -248,6 +251,7 @@
 				281FE85B28B89BCB00110749 /* ScheduledItem.swift in Sources */,
 				28FD355B28AE13DA001B6AB6 /* AnyObserver.swift in Sources */,
 				28FD356C28AF37D6001B6AB6 /* AnonymousDisposable.swift in Sources */,
+				2811648C28BC64E40000F453 /* Sink.swift in Sources */,
 				281FE85728B86ED400110749 /* ScheduledItemType.swift in Sources */,
 				28FD355D28AE13DA001B6AB6 /* Observable.swift in Sources */,
 				28FD355A28AE13DA001B6AB6 /* Disposable.swift in Sources */,
