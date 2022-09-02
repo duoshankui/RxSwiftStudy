@@ -25,6 +25,8 @@ extension ViewController {
         
         let numbers: Observable<Int> = Observable.create { observer in
             observer.onNext(1)
+            observer.onNext(2)
+            observer.onCompleted()
             return Disposables.create()
         }
         

@@ -19,7 +19,7 @@ extension ObserverType {
         self.on(.next(element))
     }
     
-    func obCompleted() {
+    func onCompleted() {
         self.on(.completed)
     }
     
